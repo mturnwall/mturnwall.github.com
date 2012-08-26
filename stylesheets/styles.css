@@ -42,8 +42,8 @@ a {
 }
 
 p {
-  margin: 0 0 20px;
-  padding: 0;
+  margin: 0;
+  padding: 0 0 15px;
 }
 
 strong {
@@ -82,6 +82,7 @@ header.without-description h1 {
 }
 header p {
   margin: 0;
+	padding: 0;
   color: #61778B;
   width: 300px;
   font-size: 13px;
@@ -176,7 +177,7 @@ header ul a strong {
 }
 
 article {
-  padding: 15px 20px;
+  padding: 15px 20px 0;
   font-size: 14px;
 	line-height: 1.3em;
   border-top: 1px solid #fff;
@@ -209,16 +210,27 @@ article h1 {
 article h2 {
 	font-size: 20px;
 }
+article a:hover {
+	text-decoration: underline;
+}
+section {
+	border-top: 1px solid #B2D2E1;
+	padding-top: 15px;
+}
+section:last-child {
+	border-bottom: 1px solid #B2D2E1;
+	margin-bottom: 12px;
+}
+section h1 {
+	font-size: 16px;
+	line-height: 20px;
+}
 
 h1, h2, h3, h4, h5, h6 {
   color: #222;
   padding: 0;
   margin: 0 0 20px;
   line-height: 1.2;
-}
-
-p, ul, ol, table, pre, dl {
-  margin: 0 0 20px;
 }
 
 h1, h2, h3 {
