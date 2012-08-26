@@ -210,6 +210,9 @@ article h1 {
 article h2 {
 	font-size: 20px;
 }
+h1 a {
+	color: #222;
+}
 article a:hover {
 	text-decoration: underline;
 }
