@@ -52,6 +52,7 @@ strong {
 }
 
 header {
+	overflow: hidden;
   -webkit-border-radius: 8px 8px 0 0;
   -moz-border-radius: 8px 8px 0 0;
   -ms-border-radius: 8px 8px 0 0;
@@ -156,14 +157,14 @@ header ul li + li + li {
   width: 79px;
 }
 header ul a {
-  line-height: 1;
   font-size: 11px;
+  line-height: 14px;
   color: #fff;
   color: rgba(255, 255, 255, 0.8);
   display: block;
   text-align: center;
   font-weight: 400;
-  padding-top: 6px;
+  padding-top: 5px;
   height: 40px;
   text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
 }
@@ -174,9 +175,10 @@ header ul a strong {
   -webkit-font-smoothing: antialiased;
 }
 
-section {
+article {
   padding: 15px 20px;
-  font-size: 15px;
+  font-size: 14px;
+	line-height: 1.3em;
   border-top: 1px solid #fff;
   background: -webkit-gradient(linear, 50% 0%, 50% 700, color-stop(0%, #fafafa), color-stop(100%, #dedede));
   background: -webkit-linear-gradient(#fafafa, #dedede 700px);
@@ -190,6 +192,22 @@ section {
   -o-border-radius: 0 0 8px 8px;
   border-radius: 0 0 8px 8px;
   position: relative;
+}
+article header {
+	background: none;
+	border: 0;
+	padding: 0;
+}
+article h1, article h2 {
+	color: #222;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	line-height: 1.3em;
+}
+article h1 {
+}
+article h2 {
+	font-size: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -291,15 +309,15 @@ footer {
   color: #ccc;
   overflow: hidden;
 }
+.themeCredit {
+	float: right;
+}
 footer a {
   color: #fff;
   font-weight: bold;
 }
 footer p {
-  float: left;
-}
-footer p + p {
-  float: right;
+  
 }
 
 @media print, screen and (max-width: 740px) {
