@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Michael Turnwall's Open Source Projects - Ajax Class</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body class="projectPage">
+    <div class="wrapper">
+      <header>
+			<div class="myAvatar"><img src="images/avatar.jpg" width="74" height="74" alt="Avatar"></div>
+			<h1>Michael Turnwall</h1>
+			<p>
+				<a href="http://twitter.com/mturnwall" title="Follow Michae Turnwall on Twitter">Twitter</a> - <a href="http://about.me/michaelturnwall">About.Me</a>
+			</p>
+        <p class="view"><a href="https://github.com/mturnwall/ajax_class">View the Project on GitHub <small>mturnwall/ajax_class</small></a></p>
+        <ul>
+          <li><a href="https://github.com/mturnwall/ajax_class/zipball/Digi-Production">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/mturnwall/ajax_class/tarball/Digi-Production">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/mturnwall/ajax_class/tree/Digi-Production">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <article>
+		<h1>Ajax Class</h1>
+        <h2>Purpose</h2>
+
+<p>This javascript object is written to allow a developer to make ajax calls for any project without having to write custom response handlers for every project. With just a single ajax call you can update multiple parts of a page regardless if you are updating code or just content. In fact you can update code blocks on one portion of a page, content on another portion, and even form fields all with a single ajax call.</p>
+
+<p>This magic is accomplished by using a standardized JSON model. This JSON model holds key:value pairs where the key is the ID of an element on a page to update and the value portion is the code or content that will be placed into the page.</p>
+
+<p>Here is an example:  </p>
+<pre><code>
+{
+   	"head": {
+    	"status": 200,
+    	"data": {
+        	"code": 400,
+        	"message": "message that can be displayed in the browser, useful when an error occurs"
+    	}
+	},
+	"body": {
+   		"update": {
+       		"html": [
+	            {
+	                "id": "mainTitle",
+	                "value": "Title Was Updated"
+	            },
+	            {
+	                "id": "mainPara",
+	                "value": "This paragraph was updated and and it now contains some &lt;strong&gt;HTML&lt;/strong&gt;."
+	            }
+	        ]
+   		},
+   		"replace": {
+	        "forms": [
+	            {
+	                "id": "name",
+	                "value": "Michael Turnwall"
+	            }
+	        ],
+	        "content": [
+	            {
+	                "id": "updateMe",
+	                "value": "1234567890"
+	            }
+	        ]
+	    },
+		"append": {
+			"after": [
+				{
+					"id": "main",
+					"value": [
+						"&lt;br&gt;&lt;br&gt;&lt;div&gt;First div that is appended&lt;/div&gt;",
+						"&lt;div&gt;Another appended div element&lt;/div&gt;"
+					]
+				}
+			],
+			"before": [
+				{
+					"id": "mainPara",
+					"value": [
+						"&lt;div&gt;&lt;strong&gt;This div is appended before an element.&lt;/strong&gt;&lt;/div&gt;"
+					]
+				}
+			]
+		}
+   	}
+}
+</code></pre>
+
+<h2>Usage</h2>
+
+<p>Using the ajax object is very simple. Everything is done with just one function call.</p>
+
+<pre><code>Digi.ajax.getData(url, [method], [parameters]);
+</code></pre>
+
+<p><strong>url</strong>: this is the URL you are making the Ajax call to.<br><strong>method</strong> [optional]: this is your method of choice which is usually GET or POST. Get is the default<br><strong>parameters</strong> [optional]: this is an object literal so you can pass data to the server.</p>
+
+<h2>Requirements</h2>
+
+<p>Right now jQuery 1.3+ is required. A future version will make the object framework free so you can use it with your framework of choice.</p>
+      </article>
+    </div>
+	<footer>
+		<p class="themeCredit">Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+		<p>Copyright &#169; 2012 Michael Turnwall</p>
+	</footer>
+	<!--[if !IE]><script>fixScale(document);</script><![endif]-->
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-34238462-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+  </body>
+</html>

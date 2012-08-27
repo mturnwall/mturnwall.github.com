@@ -218,6 +218,7 @@ article h1 {
 }
 article h2 {
 	font-size: 20px;
+	padding-bottom: 3px;
 }
 h1 a {
 	color: #222;
@@ -402,4 +403,8 @@ footer p {
   header p.view a small:before {
     content: 'at http://github.com/';
   }
+}
+
+.projectPage article h1 {
+	padding-bottom: 15px;
 }
