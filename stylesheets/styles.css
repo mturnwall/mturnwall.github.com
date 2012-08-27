@@ -69,8 +69,17 @@ header {
   padding: 15px 20px;
   border-bottom: 1px solid #B2D2E1;
 }
+.myAvatar {
+	float: left;
+	border-radius: 8px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+}
+.myAvatar img {
+	display: block;
+}
 header h1 {
-  margin: 0;
+  margin: 0 0 0 84px;
   padding: 0;
   font-size: 24px;
   line-height: 1.2;
@@ -81,7 +90,7 @@ header.without-description h1 {
   margin: 10px 0;
 }
 header p {
-  margin: 0;
+  margin: 0 0 0 84px;
 	padding: 0;
   color: #61778B;
   width: 300px;
@@ -201,7 +210,7 @@ article header {
 }
 article h1, article h2 {
 	color: #222;
-	margin-bottom: 0;
+	margin: 0;
 	padding-bottom: 0;
 	line-height: 1.3em;
 }
@@ -219,6 +228,7 @@ article a:hover {
 section {
 	border-top: 1px solid #B2D2E1;
 	padding-top: 15px;
+	position: relative;
 }
 section:last-child {
 	border-bottom: 1px solid #B2D2E1;
@@ -227,6 +237,12 @@ section:last-child {
 section h1 {
 	font-size: 16px;
 	line-height: 20px;
+	padding-bottom: 6px;
+}
+.projectLinks {
+	position: absolute;
+	top: 15px;
+	right: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
